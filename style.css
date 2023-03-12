@@ -1,0 +1,302 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+@font-face {
+    font-family: main_font;
+    src: url(fonts/FrederickatheGreat-Regular.ttf);
+}
+
+@font-face {
+    font-family: seconday;
+    src: url(fonts/Gabelisa.otf);
+}
+
+body {
+    text-align: center;
+}
+
+h1,
+h2 {
+    font-family: main_font;
+    font-weight: 500;
+    font-size: 2.5rem;
+}
+
+/*header*/
+header {
+    background-image: url(img/header.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 70vh;
+    padding: 0 1rem;
+    margin-bottom: 5rem;
+}
+
+.logo {
+    width: 10rem;
+}
+
+h1 {
+    margin-bottom: 1rem;
+}
+
+h3 {
+    margin-top: 5rem;
+    margin-bottom: 0.75rem;
+    font-family: seconday;
+    font-size: 2.5rem;
+}
+
+.happy_hour {
+    margin: 1rem 0;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.promo {
+    font-size: 2rem;
+    font-family: main_font;
+}
+
+.destra {
+    display: none;
+}
+
+/*nav*/
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.5rem;
+    position: relative;
+    background-color: #fedd0c;
+}
+
+.hideMenu {
+    display: none;
+}
+
+#menu {
+    position: absolute;
+    right: 0;
+    top: 100%;
+    background-color: inherit;
+    width: 100%;
+    text-align: center;
+}
+
+#menu a {
+    display: block;
+    width: 100%;
+    text-decoration: none;
+    color: black;
+    padding: 0.3rem;
+}
+
+#menu a:hover {
+    background-color: black;
+    color: white;
+}
+
+#menu li {
+    list-style: none;
+    margin: 0.75rem;
+}
+
+.hamburger {
+    border: none;
+    background-color: #fedd0c;
+    font-size: 2.5rem;
+    cursor: pointer;
+}
+
+/*main*/
+/*section*/
+section {
+    margin: 0 2rem 5rem 2rem;
+}
+
+section h2 {
+    margin-bottom: 1rem;
+}
+
+article {
+    margin-top: 3rem;
+}
+
+.card {
+    margin-bottom: 2.5rem;
+}
+
+.card figure {
+    margin-top: 1rem;
+}
+
+/*section*/
+
+.oggi_in_cucina div {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    color: white;
+    text-align: left;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    width: 100%;
+}
+
+.piatto_del_giorno {
+    background-image: url(img/piatto1.png);
+    height: 200px;
+}
+
+.prova_oggi {
+    background-image: url(img/piatto2.png);
+    height: 200px;
+}
+
+.da_non_perdere {
+    background-image: url(img/piatto3.png);
+    height: 200px;
+}
+
+/*footer*/
+
+footer {
+    background-image: url(img/BG-footer.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    padding: 1rem 2rem;
+}
+
+footer .logo {
+    margin-bottom: 1rem;
+}
+
+.contatti {
+    margin: 1.5rem 0;
+}
+
+.social {
+    margin: 5rem 0;
+}
+
+.social img {
+    width: 2rem;
+    margin-left: 1rem;
+}
+
+
+/*RESPONSIVE*/
+@media only screen and (min-width: 750px) {
+    .hamburger {
+        display: none;
+    }
+
+    #menu {
+        position: relative;
+        width: initial;
+    }
+
+    .hideMenu {
+        display: inline;
+    }
+
+    #menu li,
+    #menu a {
+        display: inline;
+    }
+}
+
+@media only screen and (min-width: 1050px) {
+    .destra {
+        display: inline;
+        margin-top: 3rem;
+    }
+
+    .sinistra h1 {
+        font-size: 4rem;
+    }
+
+    .destra img {
+        width: 30vw;
+        margin-right: 5rem;
+    }
+
+    .header {
+        display: flex;
+        justify-content: space-between;
+        padding: 0 3rem;
+    }
+
+    main {
+        padding: 0 3rem;
+    }
+
+    .cards {
+        display: flex;
+        justify-content: space-around;
+        position: relative;
+    }
+
+    .bg_green {
+        width: 150%;
+        height: 100px;
+        background-color: #e5e697;
+        position: absolute;
+        top: 100px;
+        z-index: -999;
+    }
+
+    .cards figure {
+        margin-bottom: 1rem;
+    }
+
+    .card {
+        width: 30%;
+    }
+
+    .bruschetta {
+        margin-bottom: 1.2rem;
+    }
+
+    .oggi_in_cucina {
+        display: flex;
+    }
+
+    .piatto_del_giorno {
+        height: 400px;
+    }
+
+    footer {
+        margin-top: 5rem;
+        text-align: left;
+    }
+
+    .foot_section {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .foot_text {
+        width: 40%;
+    }
+
+    .contatti div {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    footer article {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
